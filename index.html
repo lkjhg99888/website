@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 自己css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- swp css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- swp js -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- 自己 js -->
+    <script src="js/index.js"></script>
+
+    <title>台灣戲院</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            width: 100%;
+            height: 105px;
+            background-color: black;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .list {
+            width: 100px;
+            color: white;
+            margin-left: 30px;
+            font-size: 25px;
+        }
+
+        .logo {
+            width: 170px;
+            height: 105px;
+        }
+
+        /* 以上是nav */
+        main {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .ban_image {
+            background-image: url(素材/銀魂.jpeg);
+        }
+
+        /* <!-- 以上ban --> */
+
+        .we {
+            width: 100%;
+            height: 470px;
+            display: flex;
+            background-color: aliceblue;
+            justify-content: center;
+            position: relative;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-top: 35px;
+            font-weight: bold;
+        }
+
+        .content {
+            width: 855px;
+            height: 320px;
+            position: absolute;
+            top: 115px;
+            display: flex;
+        }
+
+        .external {
+            width: 450px;
+            height: 320px;
+            background-image: url(素材/146093807_10216483536315609_1147187680637731221_o.jpg);
+            background-size: cover;
+        }
+
+        .script {
+            width: 405px;
+            height: 320px;
+            position: relative;
+            left: 25px;
+        }
+
+        .Text {
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            top: 20%;
+        }
+
+        .Text_02 {
+            width: 360px;
+            position: absolute;
+            top: 35%;
+            line-height: 1.8;
+            letter-spacing: 2.5px;
+        }
+
+        /*<!-- 以上關於我們 --> */
+        .news {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkgoldenrod;
+        }
+
+        .news_frame {
+            width: 1140px;
+            height: 200px;
+            background: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .news_page {
+            padding: 25px;
+        }
+
+        .news_title {
+            position: absolute;
+            background: #333;
+            margin-bottom: 0px;
+            color: #fff;
+            letter-spacing: 1px;
+            padding: 10px 25px 15px;
+            left: 0px;
+            top: -85px;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 6px;
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+        }
+
+        .news_text {
+            display: flex;
+            border-bottom: 1px dashed #ccc;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height: 1;
+            color: #333;
+            font-size: 25px;
+            align-items: center;
+            margin-top: 15px;
+
+        }
+
+        .news_text h4 {
+            margin: 1px 10px;
+        }
+
+        h4 {
+            background: #faebd7;
+            padding: 3px 15px;
+            color: #9c7243;
+
+        }
+
+        /* 以上最新消息 */
+        .film {
+            width: 100%;
+            height: 590px;
+            background-color: royalblue;
+            position: relative;
+        }
+
+        .film_title {
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            position: absolute;
+            top: 30px;
+            left: 15%;
+        }
+
+        .Options {
+            width: 550px;
+            height: 50px;
+            position: absolute;
+            top: 100px;
+            left: calc(50% - 275px);
+            display: flex;
+        }
+
+        .Now {
+            width: 275px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px rgb(200, 201, 201) solid;
+            font-size: 20px;
+        }
+
+        .Movie {
+            width: 1060px;
+            height: 360px;
+            background-color: rosybrown;
+            position: absolute;
+            top: 200px;
+            left: calc(50% - 530px);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Movie_Information01 {
+            width: 210px;
+            height: 360px;
+
+            position: relative;
+        }
+
+        button {
+            border: 0px;
+            padding: 0px;
+        }
+
+        .Mark {
+            width: 30px;
+            height: 30px;
+            background-color: aquamarine;
+            position: absolute;
+            bottom: 85px;
+            left: 13px;
+        }
+
+        .name {
+            width: 210px;
+            height: 55px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 0%;
+        }
+
+        .Chinese {
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .English {
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .AAA {
+            background-image: url(素材/01.jpeg);
+            background-size: 102%;
+        }
+
+        .BBB {
+            background-image: url(素材/02.jpeg);
+            background-size: 103%;
+        }
+
+        .CCC {
+            background-image: url(素材/03.jpeg);
+            background-size: 103%;
+        }
+
+        .DDD {
+            background-image: url(素材/04.jpeg);
+            background-size: 103%;
+        }
+
+        /* 以上電影資訊 */
+        .fare {
+            width: 100%;
+            height: 690px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fare_title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 35px;
+        }
+
+        .fare_image {
+            width: 1000px;
+            height: 500px;
+            margin-top: 125px;
+            position: absolute;
+        }
+
+        /* 以上票價資訊 */
+        .milieu {
+            width: 100%;
+            height: 450px;
+            background-color: sandybrown;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .milieu_title {
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            position: absolute;
+            top: 40px;
+        }
+
+        .diamond {
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 40px;
+            color: rgb(224, 242, 252);
+
+        }
+
+        /* 以上環境介紹 */
+        .google-maps {
+            position: relative;
+            padding-bottom: 75%;
+            /* 此為地圖長寬比 */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .google-maps iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .connection {
+            width: 100%;
+            height: 350px;
+            background-color: royalblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .connection_News {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .Store {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        .Store_Text {
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .google {
+            left: 50%;
+            top: 7%;
+        }
+
+        .footer {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer_text {
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="menu">
+            <div class="list">關於我們</div>
+            <div class="list">最新消息</div>
+            <div class="list">電影資訊</div>
+            <div class="list">票價資訊</div>
+            <div class="list">環境介紹</div>
+            <div class="list">聯絡資訊</div>
+        </div>
+        <img src="素材/未命名-12.jpg" class="logo" alt="錯誤">
+    </nav>
+    <!-- 以上nav -->
+    <main>
+        <!-- Swiper -->
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper swiper1">
+                <div class="swiper-slide"><img src="素材/銀魂.jpeg" width="100%" height="100%" alt=""></div>
+                <div class="swiper-slide"><img src="素材/鋼鐵.jpg" width="100%" height="100%" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper1"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper1"></div>
+            <div class="swiper-button-prev swiper1"></div>
+        </div>
+
+    </main>
+    <!-- 以上ban -->
+    <div class="we">
+        <div class="title">關於我們</div>
+        <div class="content">
+            <div class="external"></div>
+            <div class="script">
+                <div class="Text">台灣戲院成為你的首選電影院</div>
+                <div class="Text_02">
+                    台灣戲院是在地彰化老品牌的電影院，服務在地彰化人就近可以看電影，台灣戲院分別金.銀.鑽石共三廳,其中鑽石廳設有超大超舒適的座椅及豪華的空間.四面環繞立體音響,讓你有身歷其境的快感，有方便的交通附近還有很多在地彰化美食，可以來彰化看電影時順便去吃彰化特色小吃。
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 以上關於我們 -->
+    <div class="news">
+        <div class="news_frame">
+            <div class="news_page">
+                <h2 class="news_title">最新消息</h2>
+                <ul>
+                    <li class="news_text">
+                        <span>2021-03-30</span>
+                        <h4>公告</h4>入場請記得戴上口罩，保護自己也保護他人
+                    </li>
+                    <li class="news_text">
+                        <span>2021-03-30</span>
+                        <h4>公告</h4>辦會員卡即可享受100元折扣
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 以上最新消息 -->
+    <div class="film">
+        <div class="film_title">電影資訊</div>
+        <div class="Options">
+            <button>
+                <div class="Now">正在熱映</div>
+            </button>
+            <button>
+                <div class="Now">即將上映</div>
+            </button>
+        </div>
+        <div class="Movie">
+            <div class="Movie_Information01 AAA">
+                <img src="素材/輔12.jpg" class="Mark" alt="">
+                <div class="name">
+                    <div class="Chinese">複身犯</div>
+                    <div class="English">Plurality</div>
+                </div>
+            </div>
+            <div class="Movie_Information01 BBB ">
+                <img src="素材/輔12.jpg" class="Mark" alt="">
+                <div class="name">
+                    <div class="Chinese">銀魂 THE FINAL</div>
+                    <div class="English">Gintama the Very Final</div>
+                </div>
+            </div>
+            <div class="Movie_Information01 CCC ">
+                <img src="素材/輔12.jpg" class="Mark" alt="">
+                <div class="name">
+                    <div class="Chinese">噪反</div>
+                    <div class="English">Chaos Walking</div>
+                </div>
+            </div>
+            <div class="Movie_Information01 DDD">
+                <img src="素材/普遍.jpg" class="Mark" alt="">
+                <div class="name">
+                    <div class="Chinese">尋龍使者：拉雅</div>
+                    <div class="English">Raya and the Last Dragon</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 以上電影資訊 -->
+    <div class="fare">
+        <div class="fare_title">票價資訊</div>
+        <img src="素材/電影票價.jpg" class="fare_image" alt="">
+    </div>
+    <!-- 以上票價資訊 -->
+    <div class="milieu">
+        <div class="milieu_title">環境介紹</div>
+        <div class="swiper-container swiper02">
+            <div class="swiper-wrapper swiper02">
+              <div class="swiper-slide swpp"><div class="title">影廳座位</div><img data-src="素材/座位.jpg" data-srcset="img/picture-1-2x.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div></div>
+              <div class="swiper-slide swpp"><div class="title">影廳座位</div><img data-src="素材/座位02.jpg" data-srcset="img/picture-2-2x.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div></div>
+              <div class="swiper-slide swpp"><div class="title">螢幕</div><img data-src="素材/螢幕.jpg" data-srcset="img/picture-3-2x.jpg 2x" class="swiper-lazy" >
+                    <div class="swiper-lazy-preloader"></div></div>
+              <div class="swiper-slide swpp"><div class="title">影廳座位</div><img data-src="素材/座位03.jpg" height="275px" data-srcset="img/picture-4-2x.jpg 2x" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div></div>
+            </div>
+          </div>
+        <div class="diamond">鑽石廳</div>
+    </div>
+    <!-- 以上環境介紹 -->
+    <div class="connection">
+        <ul class="Store">
+            <li class="connection_News">聯絡資訊</li>
+            <li class="Store_Text">電話:04 722 2213</li>
+            <li class="Store_Text">地址:彰化縣彰化市中正路二段48號</li>
+        </ul>
+        <iframe class="google"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.591673219569!2d120.53599695093371!3d24.080679781918217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469389a6bd61495%3A0x76897867740dae5d!2z5Y-w54Gj5aSn5oiy6Zmi!5e0!3m2!1szh-TW!2stw!4v1617029796240!5m2!1szh-TW!2stw"
+            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <!-- 以上聯絡資訊 -->
+    <div class="footer">
+        <div class="footer_text">Faker© 2021</div>
+    </div>
+    <!-- 以上footer -->
+
+</body>
+
+</html>

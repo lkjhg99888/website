@@ -1,0 +1,49 @@
+/* 以下swp換圖 */
+.swiper-container.swiper1{
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.swiper-slide.swiper1 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+/* 以下環境介紹 */
+.swiper-container.swiper02{
+  position: relative;
+}
+.swiper-slide.swpp {
+  width:400px;
+  transition-timing-function:linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.swiper-lazy{
+  width:100%;
+  border-radius: 4px;}
+.swiper-slide .title{
+  position:absolute;
+  writing-mode:vertical-lr;
+  top: 13%;
+  left:-25px;
+  font-size:18px;
+  color: rgb(102, 102, 102);
+}	
